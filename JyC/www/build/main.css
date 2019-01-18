@@ -25674,6 +25674,38 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+accordion-cliente .card-header {
+  background-color: #488aff;
+  color: #fff;
+}
+
+accordion-cliente .card-content {
+  padding: 0px 16px;
+  max-height: 0px;
+}
+
+accordion-cliente .card-header {
+  background-color: #32db64;
+}
+
+accordion-obra .card-header {
+  background-color: #488aff;
+  color: #fff;
+}
+
+accordion-obra .card-content {
+  padding: 0px 16px;
+  max-height: 0px;
+}
+
+accordion-obra .card-header {
+  background-color: #32db64;
+}
+
+page-about h1 {
+  text-align: center;
+}
+
 .img1 {
   height: 30%;
   width: 50%;

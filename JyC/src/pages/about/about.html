@@ -1,13 +1,48 @@
 <ion-header>
   <ion-navbar color="secondary">
-    <ion-title >
-      About
+    <ion-title>
+      <h1>R - 101</h1>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-<h1>HOLA MUNDO</h1>
-<br />
-<p>esto es una prueba acerca de la aplicacion de JyC Srl</p>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-label>Creacion</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{formatoFecha}}</ion-label>
+      </ion-col>
+      <ion-col>
+        <ion-label>{{codigoOferta}}</ion-label>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>      
+
+  <ion-item>
+
+    <ion-label>Responsable</ion-label>
+  
+    <ion-select [(ngModel)]="Responsable">
+      <ion-option value="0">Juan Perez</ion-option>
+      <ion-option value="1">Luis Felipe Mayta Arandia</ion-option>
+    </ion-select>
+  </ion-item>
+<accordion-obra> </accordion-obra>
+<accordion-cliente> </accordion-cliente>
+
+
+
+<ion-item>
+  <button color="secondary" ion-button icon-end>
+    Crear R-102
+    <ion-icon name="md-add-circle"></ion-icon>
+  </button>
+</ion-item>
+
+
+
 </ion-content>
