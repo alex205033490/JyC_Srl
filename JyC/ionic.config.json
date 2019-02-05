@@ -1,7 +1,0 @@
-{
-  "name": "JyC",
-  "integrations": {
-    "cordova": {}
-  },
-  "type": "ionic-angular"
-}
