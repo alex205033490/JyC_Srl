@@ -11,6 +11,18 @@ $default: #32db64;
 $primary: #32db64;
 $sucess: #32db64;
 
+$cgenerales: #32db64;
+$pprincipal: #32db64;
+$potras: #32db64;
+
+$pmandosenal: #32db64;
+$dcabina: #32db64;
+$ocabina: #32db64;
+
+$aedificio: #32db64;
+$cpprincipal: #32db64;
+$observacion: #32db64;
+
 // Some Reset
 html,
 body {
@@ -60,10 +72,9 @@ details {
 	max-height: 60px;
 	transform-origin: top center;
 	transform: rotate(0.1deg);
-	transition: all 0.3s;
-
-
-	::-webkit-details-marker {
+    transition: all 0.3s;
+   
+    ::-webkit-details-marker {
 		display: none;
 	}
 
@@ -81,9 +92,7 @@ details {
 
 	// Primary Style
 	&.primary {
-		@include states($primary);
-		
-		
+		@include states($primary);	
 	}
 
 	// Success Style
@@ -95,13 +104,52 @@ details {
 	// Square Style
 	&.square {
 		border-radius: 0;
-	}
+    }
+    
+    &.cgenerales{
+        @include states($cgenerales);
+    }
+
+    &.pprincipal{
+        @include states($pprincipal);
+    }
+
+    &.potras{
+        @include states($potras);
+    }
+
+
+    &.pmandosenal{
+        @include states($pmandosenal);
+    }
+
+    &.dcabina{
+        @include states($dcabina);
+    }
+
+
+    &.ocabina{
+        @include states($ocabina);
+    }
+
+    &.aedificio{
+        @include states($aedificio);
+    }
+
+    &.cpprincipal{
+        @include states($cpprincipal);
+    }
+
+    &.observacion{
+        @include states($observacion);
+
+    }
+
 
 	&[open] {
 		transition: all 0.6s;
 		min-height: none;
-		max-height: none;
-		
+        max-height: none;
 		
 	}
 }
@@ -109,7 +157,8 @@ details {
 summary {
 	outline: none;
 	font-size: 16px;
-	padding: 13px;
+    padding: 13px;
+    
 	
 	
 	&:selection {
@@ -122,7 +171,8 @@ summary {
 		float: left;
 		margin-right: 11px;
 		text-align: center;
-		font-size: 11px;
+        font-size: 11px;
+ 
 		
 
 		[open] & {
