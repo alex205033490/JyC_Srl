@@ -10,31 +10,68 @@
 
 <ion-content padding>
 
-    <div>
-        <ion-header>
-            <ion-toolbar >          
-                <ion-item>
-                    <ion-label>NOMBRE DE LA OBRA</ion-label>
-                    <ion-select placeholder="Seleccione el edificio">
-                      <ion-select-option value="0">SKYE</ion-select-option>
-                      <ion-select-option value="1">PACIFIC</ion-select-option>
-                    </ion-select>
-                  </ion-item>
-            </ion-toolbar>
-          </ion-header>
+      <ion-item>
+        <ion-label> SELECCIONE EL EDIFICIO  </ion-label>
+    
+        <ionic-selectable
+    
+        [(ngModel)]="user"
+        [items]="users"
+        itemValueField="id"
+        itemTextField="name"
+        [canSearch]="true"
+        (onChange)="userChanged($event)">
+        
+      </ionic-selectable>
+    
+      </ion-item>
       
-    </div>
+    
 
     <div class="container">
         <details class="default square">
           <summary>COMERCIAL RESPONSABLE</summary>
-    
+          <ion-item>
+            <ion-label> SELECCIONE UN RESPONSABLE  </ion-label>
+        
+            <ionic-selectable
+        
+            [(ngModel)]="userR"
+            [items]="usersR"
+            itemValueField="id"
+            itemTextField="name"
+            [canSearch]="true"
+            (onChange)="userChangedR($event)">
+            
+          </ionic-selectable>
+        
+          </ion-item>
 
         </details>
     
         <details class="primary square">
           <summary>DATOS DE OBRA</summary>
+
+          <ion-item>
+              <ion-label style="text-align:left">NOMBRE EDIFICIO:</ion-label>
+              <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+            </ion-item>
           
+          <ion-item>
+            <ion-label style="text-align:left">CIUDAD:</ion-label>
+            <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-label style="text-align:left">DIRECCION:</ion-label>
+              <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label style="text-align:left">ZONA:</ion-label>
+                <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+              </ion-item>
+
          </details>
     
     
@@ -42,14 +79,73 @@
         <details class="success">
           <summary>DATOS DE CLIENTE</summary>
           
-         funciona
+          <ion-item>
+              <ion-label style="text-align:left">NOMBRE:</ion-label>
+              <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+            </ion-item>
+          
+          <ion-item>
+            <ion-label style="text-align:left">CORREO:</ion-label>
+            <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+          </ion-item>
+
+          <ion-item>
+              <ion-label style="text-align:left">TELEFONO:</ion-label>
+              <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+            </ion-item>
+
     
         </details>
 
         <details class="cgenerales">
             <summary>CARACTERISTICA GENERALES</summary>
             
-           funciona
+            <ion-item>
+                <ion-label style="text-align:left">FAMILIA:</ion-label>
+                <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label style="text-align:left">MODELO:</ion-label>
+                  <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label style="text-align:left">CAPACIDAD:</ion-label>
+                    <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                      <ion-label style="text-align:left">PARADAS:</ion-label>
+                      <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label style="text-align:left">VELOCIDAD:</ion-label>
+                        <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+                      </ion-item>
+
+                      <ion-item>
+                          <ion-label style="text-align:left">RECORRIDO (mm):</ion-label>
+                          <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+                        </ion-item>
+
+                        <ion-item>
+                            <ion-label style="text-align:left">EMBARQUES:</ion-label>
+                            <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+                          </ion-item>
+
+                          <ion-item>
+                              <ion-label style="text-align:left">ACCESO:</ion-label>
+                              <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+                            </ion-item>
+
+                            <ion-item>
+                                <ion-label style="text-align:left">MANIOBRA:</ion-label>
+                                <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+                            </ion-item>
+
+
       
           </details>
 
@@ -57,25 +153,51 @@
           <details class="pprincipal">
               <summary>PUERTAS DE PISO PRINCIPAL</summary>
               
-             funciona
-        
+              <ion-item>
+                  <ion-label style="text-align:left">MATERIAL:</ion-label>
+                  <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+              </ion-item>
+              
+              
             </details>
             <details class="potras">
                 <summary>PUERTAS DE OTROS PISOS</summary>
                 
-               funciona
+                <ion-item>
+                    <ion-label style="text-align:left">MATERIAL:</ion-label>
+                    <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+                </ion-item>
           
               </details>
               <details class="pmandosenal">
                   <summary>PANELES DE MANDO Y SEÑAL</summary>
                   
-                 funciona
-            
+                  <ion-item>
+                      <ion-label style="text-align:left">SEÑALIZACION CABINA</ion-label>
+                      <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+                  </ion-item>
+                  
+                  <ion-item>
+                      <ion-label style="text-align:left">SEÑALIZACION PISO</ion-label>
+                      <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+                  </ion-item>
+
+                  <ion-item>
+                      <ion-label style="text-align:left">CANTIDAD SEÑALIZADORES</ion-label>
+                      <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+                  </ion-item>
+
+
+
                 </details>
                 <details class="dcabina">
                     <summary>DISEÑO DE CABINA</summary>
                     
-                   funciona
+                    <ion-item>
+                        <ion-label style="text-align:left">ESTETICA DE CABINA</ion-label>
+                        <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+                    </ion-item>
+  
               
                   </details>
 
@@ -83,7 +205,10 @@
                   <details class="ocabina">
                       <summary>OBSERVACIONES DE CABINA</summary>
                       
-                     funciona
+                      <ion-item>
+                          
+                          <ion-input placeholder="Placeholder"></ion-input>
+                      </ion-item>
                 
                     </details>
 
@@ -91,22 +216,33 @@
                     <details class="aedificio">
                         <summary>ADAPTABILIDAD DE EDIFICIO</summary>
                         
-                       funciona
+                        <ion-item>
+                            <ion-label style="text-align:left">TENSION DE FUERZA</ion-label>
+                            <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+                        </ion-item>
                   
                       </details>
 
                       
                       <details class="cpprincipal">
                           <summary>CONTROL Y PISO PRINCIPAL</summary>
-                          
-                         funciona
+                          <ion-item>
+                              <ion-label style="text-align:left">RESCATE</ion-label>
+                              <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+                          </ion-item>
+
+                          <ion-item>
+                              <ion-label style="text-align:left">GENERADOR</ion-label>
+                              <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+                          </ion-item>
                     
                         </details>
 
                         <details class="observacion">
                             <summary>OBSERVACIONES</summary>
-                            
-                           funciona
+                            <ion-item>
+                            <ion-input placeholder="Placeholder"></ion-input>
+                          </ion-item>
                       
                           </details>
 
