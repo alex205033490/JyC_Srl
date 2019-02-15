@@ -9,6 +9,8 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./r102.page.scss'],
 })
 export class R102Page  {
+
+  nombreEdificio: any ;
   userR = "null";
   userIdsR= [];
 
@@ -57,17 +59,17 @@ openFromCodeR (){
   users=[{
     id:0,
     name:'SKYE BLUE',
-    ciudad: 'SC'
+    ciudad: 'SANTA CRUZ'
   },
   {
     id:1,
-    name:'EQUIPETROL I',
-    ciudad:'SC'
+    name:'PLAZA REAL',
+    ciudad:'COCHABAMBA'
   },
   {
     id:2,
-    name:'MANZANO 40',
-    ciudad: 'SC'
+    name:'TELEFERICO LINEA NARANJA ESTACION PEREFERICA',
+    ciudad: 'LA PAZ'
   }
 ];
 
@@ -77,6 +79,10 @@ constructor( private toasCtrl: ToastController){
 
 userChanged (event: {component:IonicSelectableComponent, value: any}) {
   console.log('event: ', event);
+}
+
+ nombreEdificios(){
+  return  this.nombreEdificio =  "HOLA MUNDO";
 }
 
 async onClose (){

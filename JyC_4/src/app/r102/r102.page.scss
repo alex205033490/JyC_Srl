@@ -167,7 +167,7 @@ summary {
 
 	&:after {
 		margin-top: 2px;
-		content: "➕";
+
 		float: left;
 		margin-right: 11px;
 		text-align: center;
@@ -177,7 +177,6 @@ summary {
 
 		[open] & {
 			padding: 0 0 12px 0;
-			content: "➖";
 			
 		}
 	}

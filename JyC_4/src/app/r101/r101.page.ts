@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import {IonicSelectableComponent} from 'ionic-selectable';
+import { ToastController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-r101',
@@ -6,9 +9,53 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./r101.page.scss'],
 })
 export class R101Page implements OnInit {
+
+
   formatoFecha;
   codigoOferta : string;
-  constructor() { 
+
+  @ViewChild ('myselect') selectComponent : IonicSelectableComponent;
+
+  userR = "null";
+  userIdsR= [];
+
+  usersR=[{
+    id:0,
+    name:'ADRIANA PUERTA',
+    ciudad: 'SC'
+  },
+  {
+    id:1,
+    name:'PAOLA ROBLES',
+    ciudad:'SC'
+  },
+  {
+    id:2,
+    name:'ELIANA',
+    ciudad: 'SC'
+  }
+];
+
+
+userChangedR (event: {component:IonicSelectableComponent, value: any}) {
+  console.log('eventR: ', event);
+}
+
+async onCloseR (){
+  let toas= await this.toasCtrl.create ({
+    message: 'gracias por su preferencia',
+    duration: 2000
+  });
+  toas.present ();
+}
+openFromCodeR (){
+  
+  this.selectComponent.open();
+}
+
+
+
+  constructor( private toasCtrl: ToastController) { 
     this.getFormatoFecha();
     this.getcodigoOferta();
 

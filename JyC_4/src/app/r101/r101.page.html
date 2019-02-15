@@ -33,86 +33,73 @@
     <div class="container">
         <details class="default square">
           <summary>COMERCIAL RESPONSABLE</summary>
-    
-          <ion-item>
-              <ion-label>Responsable</ion-label>
-              <ion-select placeholder="Select One">
-                <ion-select-option value="0">Juan Perez</ion-select-option>
-                <ion-select-option value="1">Marta Sanchez</ion-select-option>
-              </ion-select>
-            </ion-item>
+          
+          <ion-item lines="none">
+            <ion-label> SELECCIONE UN RESPONSABLE  </ion-label>
+        
+            <ionic-selectable
+        
+            [(ngModel)]="userR"
+            [items]="usersR"
+            itemValueField="id"
+            itemTextField="name"
+            [canSearch]="true"
+            (onChange)="userChangedR($event)">
+            
+          </ionic-selectable>
+        
+          </ion-item>
+
         </details>
     
         <details class="primary square">
           <summary>DATOS DE OBRA</summary>
-          <ion-item>
-
-              <ion-grid>  
-                  <ion-row>
-                    <ion-col>
-                      <ion-label>Nombre del Edificio</ion-label>
-                    </ion-col>
-                    <ion-col>
-                        <ion-input placeholder="Campo Obligatorio*"></ion-input>
-                    </ion-col>
-                  </ion-row>
           
-                  <ion-row>
-                      <ion-col>
-                       <ion-label>Ciudad</ion-label>
-                      </ion-col>
-                      <ion-col>
-                                         
-                              <ion-item>
-      
-                                <ion-select placeholder="Seleccionar una opcion">
-                                  <ion-select-option value="0">La Paz</ion-select-option>
-                                  <ion-select-option value="1">Cochabamba</ion-select-option>
-                                  <ion-select-option value="2">Santa Cruz</ion-select-option>
-                                  <ion-select-option value="3">Tarija</ion-select-option>
-                                  <ion-select-option value="4">Sucre</ion-select-option>
-                                  <ion-select-option value="5">Oruro</ion-select-option>
-                                  <ion-select-option value="6">Potosi</ion-select-option>
-                                  <ion-select-option value="7">Pando</ion-select-option>
-                                  <ion-select-option value="8">Beno</ion-select-option>
-                                  
-    
-                                  
-                                </ion-select>
-                              </ion-item>
-    
-                      </ion-col>
-                  </ion-row>
-          
-                  <ion-row>
-                    <ion-col>
-                      <ion-label>Direccion</ion-label>
-                    </ion-col>
-                    <ion-col>
-                      <ion-input placeholder="Campo Obligatorio*"></ion-input>
-                    </ion-col>
-        
-                  </ion-row>
-          
-                  <ion-row>
-                    <ion-col>
-                      <ion-label>Zona</ion-label>
-                    </ion-col>
-                    <ion-col>
-                      <ion-input placeholder="Campo Obligatorio*"></ion-input>
-                    </ion-col>
-                  </ion-row>
-                  
-         
-                            <ion-button color="secondary" ion-button icon-end>Agregar Ubicacion (Opcional)
-                                <ion-icon name="md-map"></ion-icon>
-                            </ion-button>
-    
-                  
-                </ion-grid>
+                  <ion-item lines="none">
+              <ion-label style="text-align:left">NOMBRE EDIFICIO:</ion-label>
+              <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
 
+            </ion-item>
+          
+          <ion-item lines="none">
+            <ion-label style="text-align:left">CIUDAD:</ion-label>
+            <ion-select placeholder="Seleccionar una opcion">
+              <ion-select-option value="0">La Paz</ion-select-option>
+              <ion-select-option value="1">Cochabamba</ion-select-option>
+              <ion-select-option value="2">Santa Cruz</ion-select-option>
+              <ion-select-option value="3">Tarija</ion-select-option>
+              <ion-select-option value="4">Sucre</ion-select-option>
+              <ion-select-option value="5">Oruro</ion-select-option>
+              <ion-select-option value="6">Potosi</ion-select-option>
+              <ion-select-option value="7">Pando</ion-select-option>
+              <ion-select-option value="8">Beni</ion-select-option>
+              
 
+              
+            </ion-select>
           </ion-item>
+
+          <ion-item lines="none">
+              <ion-label style="text-align:left">DIRECCION:</ion-label>
+              <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+            </ion-item>
+
+            <ion-item lines="none">
+                <ion-label style="text-align:left">ZONA:</ion-label>
+                <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+              </ion-item>
+
+
+              <ion-item lines="none">
+                <ion-button class="my-button" end color="secondary" ion-button icon-end>Agregar Ubicacion (Opcional)
+                  <ion-icon name="md-map"></ion-icon>
+            </ion-button>
+
+              </ion-item>
+
+         
+
+  
 
          </details>
     
@@ -121,52 +108,26 @@
         <details class="success">
           <summary>DATOS DE CLIENTE</summary>
           
-          <ion-item>
-    
-              <ion-grid>
-                  <ion-row>
-                      <ion-col>
-                        <ion-label>Nombre</ion-label>
-                      </ion-col>
-                      <ion-col>
-                          <ion-input placeholder="Campo Obligatorio*"></ion-input>
-                      </ion-col>
-                    </ion-row>
-          
-                    <ion-row>
-                        <ion-col>
-                          <ion-label>Correo</ion-label>
-                        </ion-col>
-                        <ion-col>
-                            <ion-input placeholder="Campo Obligatorio*"></ion-input>
-                        </ion-col>
-                      </ion-row>
-          
-                      <ion-row>
-                          <ion-col>
-                            <ion-label>Telefono Celular</ion-label>
-                          </ion-col>
-                          <ion-col>
-                              <ion-input placeholder="Campo Obligatorio*"></ion-input>
-                          </ion-col>
-                        </ion-row>
-          
-                        <ion-row>
-                            <ion-col>
-                              <ion-label>Telefono Oficina</ion-label>
-                            </ion-col>
-                            <ion-col>
-                                <ion-input placeholder="Oficina"></ion-input>
-                            </ion-col>
-                          </ion-row>
-          
-                    
-              </ion-grid>
-    
+          <ion-item lines="none">
+            <ion-label style="text-align:left">NOMBRE:</ion-label>
+            <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
           </ion-item>
-    
-         
-    
+        
+        <ion-item lines="none">
+          <ion-label style="text-align:left">CORREO:</ion-label>
+          <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+        </ion-item>
+
+        <ion-item  lines="none">
+            <ion-label style="text-align:left" >TELEFONO CELULAR:</ion-label>
+            <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+          </ion-item>
+
+          <ion-item lines="none">
+            <ion-label style="text-align:left">TELEFONO OFICINA:</ion-label>
+            <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+          </ion-item>
+
         </details>
       </div>
     
