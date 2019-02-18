@@ -152,54 +152,107 @@
           </details>
 
           
-          <details class="pprincipal">
+            <details class="pprincipal">
               <summary>PUERTAS DE PISO PRINCIPAL</summary>
-              
-              <ion-item>
-                  <ion-label style="text-align:left">MATERIAL:</ion-label>
-                  <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
-              </ion-item>
-              
-              
+
+
+              <ion-list>
+
+                <ion-item>
+                  <ion-label>MATERIAL</ion-label>
+                  <ion-select placeholder="Seleccione">
+                    <ion-select-option value="0"> INOX </ion-select-option>
+                    <ion-select-option value="1"> CHAPA </ion-select-option>
+                    <ion-select-option value="2"> OTRO </ion-select-option>
+
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+
+
+
             </details>
             <details class="potras">
                 <summary>PUERTAS DE OTROS PISOS</summary>
                 
+               
+              <ion-list>
+
                 <ion-item>
-                    <ion-label style="text-align:left">MATERIAL:</ion-label>
-                    <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
+                  <ion-label>MATERIAL</ion-label>
+                  <ion-select placeholder="Seleccione">
+                    <ion-select-option value="0"> INOX </ion-select-option>
+                    <ion-select-option value="1"> CHAPA </ion-select-option>
+                    <ion-select-option value="2"> OTRO </ion-select-option>
+
+                  </ion-select>
                 </ion-item>
+              </ion-list>
           
               </details>
               <details class="pmandosenal">
                   <summary>PANELES DE MANDO Y SEÑAL</summary>
                   
-                  <ion-item>
-                      <ion-label style="text-align:left">SEÑALIZACION CABINA</ion-label>
-                      <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
-                  </ion-item>
-                  
-                  <ion-item>
-                      <ion-label style="text-align:left">SEÑALIZACION PISO</ion-label>
-                      <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
-                  </ion-item>
+                                 
+              <ion-list>
 
-                  <ion-item>
-                      <ion-label style="text-align:left">CANTIDAD SEÑALIZADORES</ion-label>
-                      <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
-                  </ion-item>
+                <ion-item>
+                  <ion-label>SEÑALIZACION CABINA</ion-label>
+                  <ion-select placeholder="Seleccione">
+                    <ion-select-option value="0"> 7 SEG </ion-select-option>
+                    <ion-select-option value="1"> MATRIZ </ion-select-option>
+                    <ion-select-option value="2"> TFT </ion-select-option>
+
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+
+                             
+              <ion-list>
+
+                <ion-item>
+                  <ion-label>SEÑALIZACION PISO </ion-label>
+                  <ion-select placeholder="Seleccione">
+                    <ion-select-option value="0"> 7 SEG </ion-select-option>
+                    <ion-select-option value="1"> MATRIZ </ion-select-option>
+                    <ion-select-option value="2"> TFT </ion-select-option>
+
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+
+                             
+              <ion-list>
+
+                <ion-item>
+                  <ion-label>CANTIDAD SEÑALIZADORES</ion-label>
+                  <ion-select placeholder="Seleccione">
+                    <ion-select-option value="0"> 7 SEG </ion-select-option>
+                    <ion-select-option value="1"> MATRIZ </ion-select-option>
+                    <ion-select-option value="2"> TFT </ion-select-option>
+
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+
 
 
 
                 </details>
                 <details class="dcabina">
                     <summary>DISEÑO DE CABINA</summary>
-                    
-                    <ion-item>
-                        <ion-label style="text-align:left">ESTETICA DE CABINA</ion-label>
-                        <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
-                    </ion-item>
-  
+                    <ion-list>
+
+                      <ion-item>
+                        <ion-label>ESTETICA DE CABINA</ion-label>
+                        <ion-select placeholder="Seleccione">
+                          <ion-select-option value="0"> DS10 </ion-select-option>
+                          <ion-select-option value="1"> ETC </ion-select-option>
+                          <ion-select-option value="2"> OTRO </ion-select-option>
+      
+                        </ion-select>
+                      </ion-item>
+                    </ion-list>
               
                   </details>
 
@@ -208,20 +261,25 @@
                       <summary>OBSERVACIONES DE CABINA</summary>
                       
                       <ion-item>
-                          
-                          <ion-input placeholder="Placeholder"></ion-input>
-                      </ion-item>
-                
+                        <ion-textarea></ion-textarea>
+                          </ion-item>  
                     </details>
 
                     
                     <details class="aedificio">
                         <summary>ADAPTABILIDAD DE EDIFICIO</summary>
                         
-                        <ion-item>
-                            <ion-label style="text-align:left">TENSION DE FUERZA</ion-label>
-                            <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
-                        </ion-item>
+                        <ion-list>
+
+                          <ion-item>
+                            <ion-label>TENSION DE FUERZA</ion-label>
+                            <ion-select placeholder="Seleccione">
+                              <ion-select-option value="0"> 220V </ion-select-option>
+                              <ion-select-option value="1"> 330V </ion-select-option>
+          
+                            </ion-select>
+                          </ion-item>
+                        </ion-list>
                   
                       </details>
 
@@ -229,29 +287,28 @@
                       <details class="cpprincipal">
                           <summary>CONTROL Y PISO PRINCIPAL</summary>
                           <ion-item>
-                              <ion-label style="text-align:left">RESCATE</ion-label>
-                              <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
-                          </ion-item>
-
-                          <ion-item>
-                              <ion-label style="text-align:left">GENERADOR</ion-label>
-                              <ion-input style="text-align:right" placeholder="Placeholder"></ion-input>
-                          </ion-item>
+                              <ion-label> XXX1 </ion-label>
+                              <ion-checkbox slot="end"> </ion-checkbox> 
+                            </ion-item>
+                            <ion-item>
+                              <ion-label> XXX12</ion-label>
+                              <ion-checkbox slot="end"> </ion-checkbox> 
+                            </ion-item>
+                    
                     
                         </details>
 
                         <details class="observacion">
                             <summary>OBSERVACIONES</summary>
+                 
                             <ion-item>
-                            <ion-input placeholder="Placeholder"></ion-input>
-                          </ion-item>
-                      
+                          <ion-textarea ></ion-textarea>
+                            </ion-item>                       
+
                           </details>
 
 
       </div>
     
-
-
 
 </ion-content>
