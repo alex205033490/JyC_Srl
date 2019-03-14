@@ -13,52 +13,39 @@
 
 <ion-content padding>
   <img src="assets/imgs/JYC_logo.png" class="img1">
-  <ion-grid>
-    <ion-row>
 
-      <ion-col size="6">
-        <ion-button expand="block" fill="outline" color="secondary">Agenda
-          <ion-icon slot="end" name="calendar"></ion-icon>
-        </ion-button>
-      </ion-col>
+  <ion-list>
 
-      <ion-col size="6">
-        <ion-button expand="block" fill="outline" color="secondary" routerLink= "/r101">R - 101
-          <ion-icon slot="end" name="person-add"></ion-icon>
-        </ion-button>
-      </ion-col>
+    <ion-item routerLink= "/login">
+      <ion-icon name="calendar" slot="start"></ion-icon>
+        AGENDA
 
-    </ion-row>
+    </ion-item>
 
-    <ion-row>
-      <ion-col size="6">
-        <ion-button expand="block" fill="outline" color="secondary" routerLink= "/r102">R - 102
-          <ion-icon slot="end" name="book"></ion-icon>
-        </ion-button>
-      </ion-col>
+    <ion-item routerLink= "/r101">
+      <ion-icon name="person-add" slot="start"></ion-icon>
+        R - 101
 
-      <ion-col size="6">
-        <ion-button expand="block" fill="outline" color="secondary">R - 153
-          <ion-icon slot="end" name="document"></ion-icon>
-        </ion-button>
-      </ion-col>
-    </ion-row>
+    </ion-item>
+    
+    <ion-item routerLink= "/r102">
+      <ion-icon name="book" slot="start"></ion-icon>
+        R - 102
 
-    <ion-row justify-content-start>
-      <ion-col size="3">
+    </ion-item>
 
-      </ion-col>
-      <ion-col size="6">
-        <ion-button expand="block" fill="outline" color="secondary">Buscar
-          <ion-icon slot="end" name="search"></ion-icon>
-        </ion-button>
+    <ion-item routerLink= "/login">
+      <ion-icon name="document" slot="start"></ion-icon>
+        R - 153
 
-      </ion-col>
-      <ion-col size="3">
+    </ion-item>
 
-      </ion-col>
-    </ion-row>
+    <ion-item routerLink= "/login">
+      <ion-icon name="search" slot="start"></ion-icon>
+        BUSCAR
+    </ion-item>
+  </ion-list>
 
-  </ion-grid>
+
 
 </ion-content>

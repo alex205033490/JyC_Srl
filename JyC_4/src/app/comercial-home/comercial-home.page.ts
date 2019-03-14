@@ -12,4 +12,6 @@ export class ComercialHomePage implements OnInit {
   ngOnInit() {
   }
 
+ 
+
 }
