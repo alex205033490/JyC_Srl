@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'proyectos-home', loadChildren: './proyectos-home/proyectos-home.module#ProyectosHomePageModule' },
   { path: 'r101', loadChildren: './r101/r101.module#R101PageModule' },
   { path: 'r102', loadChildren: './r102/r102.module#R102PageModule' },
+  { path: 'tecnico-home', loadChildren: './tecnico-home/tecnico-home.module#TecnicoHomePageModule' },
 ];
 
 @NgModule({
